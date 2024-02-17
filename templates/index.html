@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Hasil Hitung Suara Pemilu Presiden & Wakil Presiden RI 2024</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        #hasil-perolehan-suara {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card-style {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container" style="margin-top: 120px; margin-bottom: 120px;">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <h1 class="text-center">HASIL HITUNG SUARA PEMILU PRESIDEN & WAKIL PRESIDEN RI 2024</h1>
+            <p class="text-center">Updated at : {{ data_last_updated }}</p>
+            <p class="text-center"><span class="badge bg-info">Progress : {{ data_progres.total }} dari {{ data_progres.progres }} TPS</span></p>
+        </div>
+        <div id="chart-container" style="width: 120%; height: 600px;"></div>
+        {% for paslon in data_paslon %}
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-header text-center card-style">
+                    {{ paslon.nama.split('-')[0] }}<br>
+                    {{ paslon.nama.split('-')[1] }}.
+                </div>
+                <div class="card-body">
+                    {% for key, value in data_chart.items() %}
+                    {% if key == paslon.id_paslon: %}
+                    <div class="row">
+                        <div class="col-md-12" id="hasil-perolehan-suara">
+                            {{ value|humanize('intcomma') }} Suara
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div class="container" style="margin-top: 10px; margin-bottom: 120px;">
+        <div class="row justify-content-center">
+            <!-- Your other content here -->
+            <div class="col-md-13">
+                <!-- DataTables container -->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" id="table-data">
+                        <thead>
+                        <tr class="table-primary text-center">
+                            <th>#</th>
+                            <th>Wilayah</th>
+                            <th>Progress</th>
+                            {% for paslon in data_paslon %}
+                            <th>{{ paslon.nama.split('-')[0] }}<br>{{ paslon.nama.split('-')[1] }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                        <tbody class="text-center" style="font-size: 20px;">
+                        {% for data in data_table %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ data.data_wilayah.nama }}</td>
+                            <td>{{ data.data_paslon.persen|humanize('intcomma') }}%</td>
+                            <td>{{ data.data_paslon.1|safe|humanize('intcomma') }}</td>
+                            <td>{{ data.data_paslon.2|safe|humanize('intcomma') }}</td>
+                            <td>{{ data.data_paslon.3|safe|humanize('intcomma') }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center" style="font-size: 20px; font-weight: bold; background-color: #f8d7da; padding: 20px; width: 100%;">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <p class="text-center">Data diambil dari API KPU : https://pemilu2024.kpu.go.id/ </p>
+            <p class="text-center">Tampilan web ini dibuat oleh : <a href="https://sandroputra.com" target="_blank">Sandro Putra</a></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+<script>
+    // Initialize DataTables
+    $(document).ready(function() {
+        // Extracting data from HTML
+        var paslon1Data = [];
+        var paslon2Data = [];
+        var paslon3Data = [];
+        var wilayah = [];
+
+        {% for data in data_table %}
+        paslon1Data.push({{ data.data_paslon.1 }});
+        paslon2Data.push({{ data.data_paslon.2 }});
+        paslon3Data.push({{ data.data_paslon.3 }});
+        wilayah.push("{{ data.data_wilayah.nama }}");
+        {% endfor %}
+
+        // Create chart
+        var options = {
+            chart: {
+                type: 'line',
+                height: 600,
+                width: '100%',
+                toolbar: {
+                    show: true,
+                },
+                zoom: {
+                    enabled: true
+                },
+            },
+            colors: ['#388E3C', '#0288D1', '#D32F2F'], // Change colors here
+            series: [{
+                name: 'Paslon 1',
+                data: paslon1Data
+            }, {
+                name: 'Paslon 2',
+                data: paslon2Data
+            }, {
+                name: 'Paslon 3',
+                data: paslon3Data
+            }],
+            xaxis: {
+                categories: wilayah
+            },
+            yaxis: {
+                title: {
+                    text: 'Suara'
+                }
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val.toLocaleString() + " Suara"
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart-container"), options);
+        chart.render();
+
+    });
+</script>
+
+
+</body>
+</html>
