@@ -17,9 +17,53 @@
 <!-- End -->
 
 
-  <b> <ul> Pemilu biasanya merupakan proses demokratis di mana warga negara memilih perwakilan mereka dalam pemerintahan. Pemilu dapat dilakukan untuk memilih presiden, anggota parlemen, gubernur, atau pejabat lainnya, tergantung pada sistem pemerintahan suatu negara.
-  Jelang pemilu, seringkali terdapat persiapan yang melibatkan pendaftaran pemilih, pembentukan partai politik, kampanye politik, dan debat antar kandidat. Hari pemungutan suara adalah momen penting di mana warga memilih calon favorit mereka.
-  Harap diingat bahwa rincian mengenai Pemilu 2024 sangat tergantung pada negara dan wilayah tertentu. Jika Anda mencari informasi spesifik tentang Pemilu 2024 di suatu negara atau wilayah tertentu, disarankan untuk memeriksa sumber-sumber berita terkini atau situs web resmi lembaga pemilihan setempat. </ul> </b>
+  <b> <ul> 
+  Pemilihan Umum Presiden dan Wakil Presiden Indonesia 2024 adalah proses demokratis di mana warga negara Indonesia akan memilih pemimpin negara mereka untuk masa jabatan lima tahun ke depan. Pemilu tersebut dijadwalkan akan dilaksanakan pada tanggal tertentu sesuai dengan jadwal yang ditetapkan oleh Komisi Pemilihan Umum (KPU) Indonesia. Berikut adalah keterangan umum mengenai Pemilu Presiden dan Wakil Presiden Indonesia 2024:
+
+Calon Presiden dan Wakil Presiden:
+
+Calon presiden dan wakil presiden akan diusulkan oleh partai politik atau gabungan partai politik yang memenuhi syarat administratif sesuai peraturan yang ditetapkan oleh KPU.
+Calon presiden dan wakil presiden akan melakukan kampanye untuk memperkenalkan visi, misi, dan program kerja mereka kepada masyarakat.
+
+
+<details>
+    <summary> Pendaftaran Calon: </summary>
+Partai politik atau gabungan partai politik yang memenuhi persyaratan akan mendaftarkan calon presiden dan wakil presiden ke KPU.
+KPU akan melakukan verifikasi administratif terhadap kelengkapan dokumen dan syarat calon.
+
+</details>
+
+<details>
+    <summary> Kampanye Pemilu: </summary>
+Setelah proses pendaftaran, calon presiden dan wakil presiden akan memulai kampanye pemilu untuk memperoleh dukungan dan suara dari masyarakat.
+Kampanye akan dilakukan secara adil dan seimbang, sesuai dengan aturan yang ditetapkan oleh KPU.
+  
+</details>
+
+<details>
+    <summary> Pemungutan Suara: </summary>
+Pemungutan suara dilakukan pada hari yang telah ditentukan, di seluruh wilayah Indonesia, baik di dalam negeri maupun di luar negeri.
+Warga negara yang memenuhi syarat akan memberikan suaranya untuk memilih calon presiden dan wakil presiden pilihan mereka.
+
+</details>
+
+<details>
+    <summary> Perhitungan Suara: </summary>
+Setelah pemungutan suara selesai, KPU akan melakukan perhitungan suara untuk menentukan pemenang pemilu.
+Pihak yang kalah dapat mengajukan gugatan ke Mahkamah Konstitusi jika mereka merasa ada pelanggaran yang signifikan selama proses pemilu.
+</details>
+
+<details>
+    <summary> Pelantikan Pemenang: </summary>
+Pasangan calon presiden dan wakil presiden yang memperoleh suara terbanyak akan diumumkan sebagai pemenang pemilu.
+Pemenang pemilu akan dilantik sebagai presiden dan wakil presiden untuk masa jabatan lima tahun.
+</details>
+
+
+Pemilu Presiden dan Wakil Presiden Indonesia 2024 merupakan wujud partisipasi masyarakat dalam proses demokrasi dan penentuan arah kepemimpinan negara. Proses ini diharapkan berjalan transparan, adil, dan sesuai dengan prinsip-prinsip demokrasi yang menghormati suara rakyat.
+
+
+  </ul> </b>
 
 <!-- Garis Lurus -->
 <img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="javascript" width="1000"/> 
