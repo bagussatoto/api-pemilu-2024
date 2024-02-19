@@ -18,7 +18,7 @@
 
 
   <b> <ul> 
-  Pemilihan Umum Presiden dan Wakil Presiden Indonesia 2024 adalah proses demokratis di mana warga negara Indonesia akan memilih pemimpin negara mereka untuk masa jabatan lima tahun ke depan. Pemilu tersebut dijadwalkan akan dilaksanakan pada tanggal tertentu sesuai dengan jadwal yang ditetapkan oleh Komisi Pemilihan Umum (KPU) Indonesia. Berikut adalah keterangan umum mengenai Pemilu Presiden dan Wakil Presiden Indonesia 2024:
+Pemilihan Umum Presiden dan Wakil Presiden Indonesia 2024 adalah proses demokratis di mana warga negara Indonesia akan memilih pemimpin negara mereka untuk masa jabatan lima tahun ke depan. Pemilu tersebut dijadwalkan akan dilaksanakan pada tanggal tertentu sesuai dengan jadwal yang ditetapkan oleh Komisi Pemilihan Umum (KPU) Indonesia. Berikut adalah keterangan umum mengenai Pemilu Presiden dan Wakil Presiden Indonesia 2024.
 
 <details>
     <summary> Calon Presiden dan Wakil Presiden: </summary>
